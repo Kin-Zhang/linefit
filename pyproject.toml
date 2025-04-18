@@ -21,6 +21,9 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",        
 ]
+dependencies = [
+    "numpy",
+]
 
 [project.urls]
 urls = "https://github.com/Kin-Zhang/linefit"

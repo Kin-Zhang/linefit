@@ -21,6 +21,7 @@ setup(
         'Programming Language :: Python :: 3.13',        
     ],
     install_requires=[
-        # List your package dependencies here
+        "numpy",
     ],
+    python_requires='>=3.8',
 )
