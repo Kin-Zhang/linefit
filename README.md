@@ -5,7 +5,8 @@ linefit
 [![Python Versions](https://img.shields.io/pypi/pyversions/linefit)](https://pypi.org/project/linefit/)
 [![Download Stats](https://img.shields.io/pypi/dm/linefit)](https://pypistats.org/packages/linefit)
 
-linefit is a ground segmentation algorithm for 3D point clouds. This repo we setup a python binding for the original C++ code and push to pypi for easy installation through `pip install linefit`.
+linefit is a ground segmentation algorithm for 3D point clouds. 
+This repo we setup a python binding for the original C++ code and push to pypi for easy installation through `pip install linefit`.
 
 Author: C++ code from [Lorenz Wellhausen](https://github.com/lorenwel), python package from [Qingwen Zhang](https://kin-zhang.github.io/).
 
@@ -15,6 +16,7 @@ Available in: <a href="https://github.com/Kin-Zhang/linefit"><img src="https://i
 
 <!--  -->
 📜 Change Log:
+- 2025-04-18: Add `__init__.py` to the package with `ascontiguousarray` to avoid unexpected point error reading, add package to the latest python (3.13) also. Rename the default branch to `main`.
 - 2024-07-03: Speed up nanobind `np.array` <-> `std::vector<Eigen:: Vector3d>` conversion and also `NOMINSIZE` in make. Speed difference: 0.1s -> 0.01s. Based on [discussion here](https://github.com/wjakob/nanobind/discussions/426).
 - 2024-02-15: Initial version.
 
@@ -26,9 +28,8 @@ Option A: Install from pypi `pip install linefit`
 
 Option B: Clone this repo and run following to build:
 ```bash
-cmake -B build && cmake --build build
-pip install .
-python3 -c 'import linefit; print("success")'
+pip install git+https://github.com/Kin-Zhang/linefit
+python3 -c 'import linefit; print("linefit ground seg lib import success")'
 ```
 
 Dependencies for demo:
@@ -103,6 +104,17 @@ The original methods are described in the following paper:
   pages={560--565},
   year={2010},
   organization={IEEE}
+}
+```
+
+This Python package is developed during HiMo project, please consider to cite our paper if this python package is helpful for your research:
+
+```
+@article{zhang2025himo,
+    title={HiMo: High-Speed Objects Motion Compensation in Point Cloud},
+    author={Zhang, Qingwen and Khoche, Ajinkya and Yang, Yi and Ling, Li and Sina, Sharif Mansouri and Andersson, Olov and Jensfelt, Patric},
+    year={2025},
+    journal={arXiv preprint arXiv:2503.00803},
 }
 ```
 

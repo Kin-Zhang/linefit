@@ -51,7 +51,7 @@
 namespace nb = nanobind;
 using namespace nb::literals;
 
-NB_MODULE(linefit, m) {
+NB_MODULE(linefit_bind, m) {
     nb::class_<GroundSegmentation>(m, "ground_seg")
         .def(nb::init<>(), "linefit ground segmentation constructor, param: check default config to know more.")
         .def(nb::init<const std::string &>(), "linefit ground segmentation constructor, with toml file as param file input.")

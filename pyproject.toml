@@ -4,7 +4,7 @@ build-backend = "scikit_build_core.build"
 
 [project]
 name = "linefit"
-version = "1.0.1"
+version = "1.1.0"
 description = "linefit ground segmentation algorithm Python bindings"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -19,6 +19,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",        
 ]
 
 [project.urls]
@@ -33,7 +34,7 @@ minimum-version = "0.4"
 build-dir = "build/{wheel_tag}"
 
 # Build stable ABI wheels for CPython 3.12+
-wheel.py-api = "cp312"
+wheel.py-api = "cp313"
 
 
 [tool.cibuildwheel]
